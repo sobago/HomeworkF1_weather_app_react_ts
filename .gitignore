@@ -10,7 +10,7 @@
 /weath_api
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
