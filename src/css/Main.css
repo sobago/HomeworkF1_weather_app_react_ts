@@ -1,0 +1,194 @@
+ul, .tabs {
+    list-style-type: none;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabs li {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    border: 1px solid #333;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabs li:hover {
+    background-color: #444;
+}
+
+.alerts {
+    color: rgb(230, 86, 86);
+    border: 1px solid  rgb(255, 83, 83);
+    background-color: #444;
+    padding: 5px;
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.alert-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.alerts span {
+    padding: 0 5px;
+}
+
+.current-weather .weather-card {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.current-weather .weather-card li {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    background-color: #555;
+    padding: 10px;
+    text-align: center;
+    transition: transform 200ms ease;
+}
+
+.current-weather .weather-card li:hover {transform: scale(1.05);}
+
+.current-weather .li-icon, .current-weather .weather-card img, .humidity-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.hourly-weather {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hourly-weather > .weather-card {
+    font-size: 0.8rem;
+    padding: 5px;
+    margin: 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hourly-weather > .weather-card > li {
+    padding: 5px;
+    margin: 2px;
+    width: 100px;
+    height: auto;
+    background-color: #444;
+}
+
+.hourly-weather > .weather-card .li-icon {
+    height: 36px;
+    width: 36px;
+}
+
+.hourly-weather-tab-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#hourly-weather-tab {
+    width: 70%;
+    height: 40px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms ease;
+}
+
+
+#hourly-weather-tab:hover {
+    transform: scale(1.1);
+    background-color: #555;
+    cursor: pointer;
+}
+
+#weather-two-days {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weather-two-days > .weather-card {
+    font-size: 0.8rem;
+    padding: 5px;
+    margin: 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weather-two-days > .weather-card > li {
+    padding: 5px;
+    margin: 2px;
+    width: 100px;
+    height: auto;
+    background-color: #555;
+    text-align: center;
+}
+
+#weather-two-days > .weather-card .li-icon {
+    height: 36px;
+    width: 36px;
+}
+
+#weather-week {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weather-week > .weather-card {
+    font-size: 0.8rem;
+    padding: 5px;
+    margin: 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weather-week > .weather-card > li {
+    padding: 5px;
+    margin: 2px;
+    width: 100px;
+    height: auto;
+    background-color: #555;
+    text-align: center;
+}
+
+#weather-week > .weather-card .li-icon {
+    height: 36px;
+    width: 36px;
+}
+
+@media screen and (max-width: 510px) {
+    .alerts {
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+    .current-weather .weather-card li {
+        width: 30%;
+        font-size: 0.8rem;
+    }
+    .current-weather .li-icon, .current-weather .weather-card img {
+        width: 48px;
+        height: 48px;
+    }
+    .hourly-weather > .weather-card > li {
+        
+    }
+}

@@ -1,0 +1,44 @@
+header {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+header h1, .header-icon {
+    align-self: center;
+}
+
+.user-city {
+    max-width: 180px;
+    align-self: center;
+}
+
+.settings-icon {
+    opacity: 0.5;
+    transition: transform 200ms ease;
+}
+
+.settings-icon:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+header form {
+    padding-top: 5px;
+}
+
+header form input {
+    background: #444;
+    color: rgb(178, 178, 178);
+}
+
+header form button {
+    cursor: pointer;
+    transition: transform 200ms ease;
+}
+header form button:hover {
+    transform: scale(1.2);
+}
