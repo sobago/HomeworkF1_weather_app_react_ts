@@ -8,6 +8,7 @@ import { WiThermometer,
     WiStrongWind,
     WiWindDeg } from "react-icons/wi";
 import {IoTimeOutline} from "react-icons/io5"
+import "../css/WeatherCard.css"
 
 interface WeatherCardObject {
     clouds?: any
@@ -52,6 +53,7 @@ function WeatherCard ({children, weather, getTime, keyy}: Props) {
             <ul className="weather-card" key={el.dt+`${el.sunrise}`+el.wind_deg}>
                 <li>
                     <IoTimeOutline className="li-icon"/>
+                    
                     <p>
                         {el.temp && el.temp.hasOwnProperty("day") ?
                         getTime(el.dt).split(" ")[0]
@@ -60,7 +62,7 @@ function WeatherCard ({children, weather, getTime, keyy}: Props) {
                 </li>
                 {el.clouds ?
                     <li>
-                        <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}.png`} alt="Иконка погоды"  className="li-icon"/>
+                        <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}.png`} alt="Иконка погоды" />
                         <p>{el.weather[0].description[0].toUpperCase()+el.weather[0].description.slice(1)}</p>
                         <p>Облачность: {el.clouds} %</p>
                     </li>
@@ -72,7 +74,7 @@ function WeatherCard ({children, weather, getTime, keyy}: Props) {
                     </li>
                 :null}
                 {el.temp && el.temp.hasOwnProperty("day") ?
-                    <li>
+                    <li className="flex-item">
                         <WiThermometer className="li-icon"/>
                         <p>Температура: </p>
                         <div>Утро: {el.temp.morn}&deg;</div>
@@ -88,7 +90,7 @@ function WeatherCard ({children, weather, getTime, keyy}: Props) {
                     </li>
                 :null}
                 {el.feels_like && el.feels_like.hasOwnProperty("day") ?
-                    <li>
+                    <li className="flex-item">
                         <WiThermometerExterior className="li-icon"/>
                         <p>По ощущениям: </p>
                         <div>Утро: {el.feels_like.morn}&deg;</div>

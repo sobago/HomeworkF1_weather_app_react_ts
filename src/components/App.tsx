@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/App.css';
 import Header from './Header';
 import Main from './Main';
 
-let API_KEY: string | null = null
+let API_KEY: string | null = "7ebc5f042d8a57a01e58e15310c35c5c"
 
 if (!API_KEY) {
   API_KEY = prompt("Отсутствует API-key, введите ключ")
@@ -25,10 +25,8 @@ function App() {
     });
   };
 
-  // if coords is empty, try get coords from browser
-  if (!latitude && !longitude) {
-    getCoords();
-  }
+  // try get coords from browser
+  useEffect(getCoords, []);
 
   // Get city name from OpenWeather API
   function getCityCoord(lat : number, long : number) {

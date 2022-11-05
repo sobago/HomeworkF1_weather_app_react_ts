@@ -18,6 +18,7 @@ function Header({ children, userCity, onClickGetCity }: Props) {
     // Disable page refresh when pressing Enter
     const onFormSubmit = (e : any) => {
             e.preventDefault();
+            setEditCity(editCity = !editCity)
             onClickGetCity(cityFromForm)
           }
 
